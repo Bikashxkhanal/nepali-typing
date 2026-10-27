@@ -1,2 +1,2 @@
-import {SiteHeader} from '@/components/SiteHeader';import {ResetPasswordForm} from '@/components/ResetPasswordForm';export const metadata={title:'Choose a new password',robots:{index:false,follow:false}};
+import {SiteHeader} from '@/components/SiteHeader';import {ResetPasswordForm} from '@/components/ResetPasswordForm';import {buildMetadata} from '@/lib/seo';export function generateMetadata(){return buildMetadata({title:'Choose a new account password',description:'Set a new password for your NepaliTyping account using a valid reset link.',path:'/reset-password',noindex:true})}
 export default function Reset(){return <><SiteHeader/><main className="container-app auth-page"><ResetPasswordForm/></main></>}

@@ -1,2 +1,2 @@
-import {SiteHeader} from '@/components/SiteHeader';import {VerificationPanel} from '@/components/VerificationPanel';export const metadata={title:'Verify your email',robots:{index:false,follow:false}};
+import {SiteHeader} from '@/components/SiteHeader';import {VerificationPanel} from '@/components/VerificationPanel';import {buildMetadata} from '@/lib/seo';export function generateMetadata(){return buildMetadata({title:'Verify your NepaliTyping email',description:'Confirm your email address to complete NepaliTyping account setup.',path:'/verify-email',noindex:true})}
 export default function Verify(){return <><SiteHeader/><main className="container-app auth-page"><VerificationPanel/></main></>}

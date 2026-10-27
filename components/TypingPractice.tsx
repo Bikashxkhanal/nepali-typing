@@ -1,6 +1,7 @@
 'use client';
 import {useCallback,useEffect,useRef,useState} from 'react';import type React from 'react';
 import {Keyboard} from './Keyboard';import {TypingSurface} from './TypingSurface';import {useTypingEngine} from '@/hooks/useTypingEngine';import {getLayout,layouts} from '@/lib/layouts';import {drills} from '@/lib/lessons';import type {TypingState} from '@/lib/typing-engine';
+import {trackEvent} from '@/lib/analytics-client';
 
 export function TypingPractice({level}:{level:1|2|3}){
  const [layoutId,setLayoutId]=useState('traditional'),[textIndex,setTextIndex]=useState(0),[start,setStart]=useState(0),[seconds,setSeconds]=useState(60),[duration,setDuration]=useState(60),[mode,setMode]=useState<'timer'|'words'>('timer'),[wordText,setWordText]=useState(()=>makeWordTest()),[showKeyboard,setShowKeyboard]=useState(true),[done,setDone]=useState(false),[stopOnError,setStopOnError]=useState(false),[series,setSeries]=useState<number[]>([]),[shareMessage,setShareMessage]=useState('');const startRef=useRef(0),engineState=useRef<TypingState>();const text=level===3&&mode==='words'?wordText:drills[textIndex%drills.length];
@@ -10,6 +11,7 @@ export function TypingPractice({level}:{level:1|2|3}){
  const engine=useTypingEngine({target:text,layoutId,stopOnError,onComplete:finish});engineState.current=engine.state;
  useEffect(()=>{if(!start||done||level!==3||mode!=='timer')return;const timer=setInterval(()=>{setSeconds(value=>Math.max(0,value-1));const elapsed=Math.max(1,(Date.now()-startRef.current)/1000),current=engineState.current;const wpm=current?Math.floor(current.correctKeystrokes/5/(elapsed/60)):0;setSeries(values=>[...values.slice(-59),wpm])},1000);return()=>clearInterval(timer)},[start,done,level,mode]);
  useEffect(()=>{if(level===3&&mode==='timer'&&seconds===0)setDone(true)},[seconds,level,mode]);
+ useEffect(()=>{if(done&&level===3)trackEvent('finish_test',{mode,duration})},[done,level,mode,duration]);
  function onKeyDown(event:React.KeyboardEvent<HTMLDivElement>){if(done)return;const mapped=event.code==='Space'||!!getLayout(layoutId).mapping[event.code];if(!start&&mapped){const now=Date.now();startRef.current=now;setStart(now)}engine.onKeyDown(event)}
  function reset(){setDone(false);setStart(0);startRef.current=0;setSeconds(duration);setSeries([]);setShareMessage('');if(level===3&&mode==='words')setWordText(makeWordTest());setTextIndex(value=>value+1);engine.reset()}
  function changeMode(next:'timer'|'words'){setMode(next);setDone(false);setStart(0);startRef.current=0;setSeconds(duration);setTextIndex(0);setSeries([]);if(next==='words')setWordText(makeWordTest())}

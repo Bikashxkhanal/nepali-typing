@@ -1,0 +1,1 @@
+Noto Sans Devanagari regular and bold font files are distributed under the SIL Open Font License 1.1 by Google LLC. The font family is script-specific and is loaded through `next/font/local` with `display: swap`.

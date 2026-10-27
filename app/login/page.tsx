@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';import {SiteHeader} from '@/components/SiteHeader';import {LoginForm} from '@/components/LoginForm';
-export const metadata:Metadata={title:'Log in',robots:{index:false,follow:false}};
+import {SiteHeader} from '@/components/SiteHeader';import {LoginForm} from '@/components/LoginForm';import {buildMetadata} from '@/lib/seo';
+export function generateMetadata(){return buildMetadata({title:'Sign in to NepaliTyping',description:'Sign in to sync Nepali typing progress and access your account.',path:'/login',noindex:true})}
 export const dynamic='force-dynamic';
 export default function Login({searchParams}:{searchParams:{callbackUrl?:string;reset?:string;error?:string}}){const raw=searchParams.callbackUrl||'';const callbackUrl=raw.startsWith('/')&&!raw.startsWith('//')?raw:'/learn';const providers=[process.env.AUTH_GOOGLE_ID&&process.env.AUTH_GOOGLE_SECRET?'google':'',process.env.AUTH_GITHUB_ID&&process.env.AUTH_GITHUB_SECRET?'github':'',process.env.AUTH_FACEBOOK_ID&&process.env.AUTH_FACEBOOK_SECRET?'facebook':''].filter(Boolean);return <><SiteHeader/><main className="container-app auth-page">{searchParams.reset&&<p className="form-success">Password updated. Log in with your new password.</p>}<LoginForm providers={providers} callbackUrl={callbackUrl} authError={searchParams.error}/></main></>}
