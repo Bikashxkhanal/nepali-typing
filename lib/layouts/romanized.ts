@@ -1,0 +1,3 @@
+import { createLayout } from './types';
+// In-app phonetic starter map. Multi-key transliteration uses the shared composer.
+export default createLayout('romanized','Nepali Romanized / Phonetic','Phonetic Unicode entry (common starter map)',{KeyA:'अ',KeyB:'ब',KeyC:'च',KeyD:'द',KeyE:'ए',KeyF:'फ',KeyG:'ग',KeyH:'ह',KeyI:'इ',KeyJ:'ज',KeyK:'क',KeyL:'ल',KeyM:'म',KeyN:'न',KeyO:'ओ',KeyP:'प',KeyQ:'क्',KeyR:'र',KeyS:'स',KeyT:'त',KeyU:'उ',KeyV:'व',KeyW:'व',KeyX:'क्ष',KeyY:'य',KeyZ:'ज्ञ',Space:' '},{KeyA:'आ',KeyB:'भ',KeyC:'छ',KeyD:'ध',KeyE:'ऐ',KeyF:'फ्',KeyG:'घ',KeyH:'ः',KeyI:'ई',KeyJ:'झ',KeyK:'ख',KeyL:'ळ',KeyM:'ं',KeyN:'ण',KeyO:'औ',KeyP:'फ',KeyQ:'त्र',KeyR:'ृ',KeyS:'श',KeyT:'थ',KeyU:'ऊ',KeyV:'ँ',KeyW:'ौ',KeyX:'त्र',KeyY:'य्',KeyZ:'ष'});

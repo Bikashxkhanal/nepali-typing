@@ -1,0 +1,3 @@
+import { createLayout } from './types';
+// Devanagari InScript base positions, aligned to C-DAC/Unicode reference charts.
+export default createLayout('inscript','Unicode Inscript','Devanagari InScript base chart',{KeyA:'ो',KeyB:'व',KeyC:'म',KeyD:'्',KeyE:'ा',KeyF:'ि',KeyG:'ु',KeyH:'प',KeyI:'घ',KeyJ:'र',KeyK:'क',KeyL:'त',KeyM:'स',KeyN:'ल',KeyO:'द',KeyP:'ज',KeyQ:'ौ',KeyR:'ी',KeyS:'े',KeyT:'ू',KeyU:'ह',KeyV:'न',KeyW:'ै',KeyX:'ं',KeyY:'ब',KeyZ:'श',Semicolon:'च',Comma:'अ',Period:'।',Slash:'य',Space:' '},{KeyA:'ओ',KeyB:'ँ',KeyC:'ण',KeyD:'्',KeyE:'आ',KeyF:'ई',KeyG:'ऊ',KeyH:'फ',KeyI:'घ',KeyJ:'ऱ',KeyK:'ख',KeyL:'थ',KeyM:'ष',KeyN:'ळ',KeyO:'ध',KeyP:'झ',KeyQ:'औ',KeyR:'ॠ',KeyS:'ै',KeyT:'ऊ',KeyU:'ः',KeyV:'ण',KeyW:'ऐ',KeyX:'ँ',KeyY:'भ',KeyZ:'ष'});

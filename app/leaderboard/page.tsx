@@ -1,0 +1,2 @@
+import {SiteHeader} from '@/components/SiteHeader';export const metadata={title:'Global Leaderboard',robots:{index:false,follow:false}};
+export default function Leaderboard(){return <><SiteHeader/><main className="container section"><h1>NepaliTyping leaderboard</h1><p className="muted">Log in to submit your test scores and see the live global rankings.</p><a className="button" href="/login?callbackUrl=/leaderboard">Log in to join the leaderboard</a><div className="practice-card" style={{marginTop:24}}>The global leaderboard is ready for verified typists.</div></main></>}

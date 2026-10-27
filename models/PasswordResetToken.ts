@@ -1,0 +1,1 @@
+import {Schema,models,model} from 'mongoose';const S=new Schema({userId:{type:Schema.Types.ObjectId,required:true,index:true},tokenHash:{type:String,required:true,unique:true},expiresAt:{type:Date,required:true,expires:0}},{timestamps:true});export default models.PasswordResetToken||model('PasswordResetToken',S);

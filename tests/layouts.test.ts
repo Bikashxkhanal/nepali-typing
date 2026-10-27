@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest';import {layouts,getLayout} from '../lib/layouts';
+describe('keyboard maps',()=>{it('provides five typed layouts with physical codes and finger assignments',()=>{expect(layouts).toHaveLength(5);for(const layout of layouts){expect(layout.mapping.KeyA).toBeTruthy();expect(layout.fingers.KeyA).toBeTruthy()}});it('falls back to the traditional layout',()=>{expect(getLayout('missing').id).toBe('traditional')})});

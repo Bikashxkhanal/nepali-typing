@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import './globals.css';
+export const metadata:Metadata={metadataBase:new URL(process.env.NEXT_PUBLIC_SITE_URL||'https://nepalityping.com'),title:{default:'NepaliTyping — Learn Nepali Typing Fast & Accurately',template:'%s | NepaliTyping'},description:'Free Nepali typing practice, lessons and speed tests for Unicode, Preeti and Inscript layouts.',openGraph:{siteName:'NepaliTyping',type:'website',locale:'ne_NP'},twitter:{card:'summary_large_image'}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="ne"><body>{children}</body></html>}

@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import {SiteHeader} from '@/components/SiteHeader';import {TypingPractice} from '@/components/TypingPractice';
+export const metadata:Metadata={title:'Nepali Typing Practice — Words and Sentences',description:'Practice Nepali words and sentences with live typing feedback.'};
+export default function Practice(){return <><SiteHeader/><main className="container section"><div className="eyebrow">LEVEL 2 · INTERMEDIATE</div><h1>Build rhythm with Nepali words and sentences.</h1><p className="muted">Mistakes are highlighted as you practice. Correct a letter with Backspace and continue.</p><TypingPractice level={2}/></main></>}

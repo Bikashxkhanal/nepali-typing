@@ -1,0 +1,1 @@
+import {Schema,models,model} from 'mongoose';const S=new Schema({lessonId:{type:String,unique:true,required:true},title:{type:String,required:true},letters:{type:[String],required:true},order:{type:Number,required:true}},{timestamps:true});S.index({order:1});export default models.Lesson||model('Lesson',S);

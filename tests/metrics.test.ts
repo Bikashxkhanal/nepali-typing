@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest';import {graphemes,measure} from '../lib/metrics';
+describe('Nepali typing metrics',()=>{it('counts a base letter and matra as one grapheme',()=>{expect(graphemes('कि')).toHaveLength(1)});it('calculates accuracy and errors',()=>{expect(measure('क ख','क ग',60)).toMatchObject({errors:1,accuracy:67,wpm:0})});it('calculates character WPM over elapsed minutes',()=>{const text='क'.repeat(25);expect(measure(text,text,60).wpm).toBe(5)})});

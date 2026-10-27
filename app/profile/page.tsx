@@ -1,0 +1,2 @@
+import {SiteHeader} from '@/components/SiteHeader';export const metadata={title:'Your profile',robots:{index:false,follow:false}};
+export default function Profile(){return <><SiteHeader/><main className="container section"><h1>Your typing profile</h1><p className="muted">Sign in to sync lessons, preferred layout and best scores across devices.</p><a className="button" href="/login">Log in</a></main></>}

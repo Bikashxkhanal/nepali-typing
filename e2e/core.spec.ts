@@ -1,0 +1,3 @@
+import {test,expect} from '@playwright/test';
+test('landing page links into lessons',async({page})=>{await page.goto('/');await expect(page.getByRole('heading',{name:/नेपाली टाइपिङ/})).toBeVisible();await page.getByRole('link',{name:/Start Learning/}).click();await expect(page).toHaveURL(/learn/);await expect(page.getByRole('heading',{name:/Learn Nepali letters/})).toBeVisible()});
+test('practice accepts a selectable layout',async({page})=>{await page.goto('/practice');await expect(page.getByLabel('Keyboard layout')).toBeVisible();await page.getByLabel('Keyboard layout').selectOption('inscript');await expect(page.getByLabel('Keyboard layout')).toHaveValue('inscript')});

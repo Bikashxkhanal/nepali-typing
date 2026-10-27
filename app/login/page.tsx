@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import {SiteHeader} from '@/components/SiteHeader';
+export const metadata:Metadata={title:'Log in',robots:{index:false,follow:false}};
+export default function Login(){return <><SiteHeader/><main className="container"><section className="auth-card"><h1>Welcome back</h1><p className="muted">Sign in to submit scores and sync your typing progress.</p><button className="button secondary" style={{width:'100%'}}>Continue with Google</button><form><input type="email" placeholder="Email address"/><input type="password" placeholder="Password"/><button className="button" style={{width:'100%'}}>Log in</button></form><p><a href="/forgot-password">Forgot password?</a></p><p>New here? <a href="/signup">Create an account</a></p></section></main></>}
