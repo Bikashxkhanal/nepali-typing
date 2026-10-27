@@ -1,0 +1,2 @@
+import {SiteHeader} from '@/components/SiteHeader';export const metadata={title:'Privacy Policy'};
+export default function Privacy(){return <><SiteHeader/><main className="container-app section-compact"><article className="card"><h1>Privacy Policy</h1><p>We use your account details to provide sign-in, email verification and progress sync. Guest practice progress stays in your browser unless you sign in and choose to merge it.</p><p>We do not display your email address publicly. You can request account assistance through the site contact channel.</p></article></main></>}

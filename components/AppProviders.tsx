@@ -1,0 +1,5 @@
+'use client';
+import {SessionProvider,useSession} from 'next-auth/react';import {useEffect,useRef} from 'react';
+import {lessonGroups} from '@/lib/lessons';
+function ProgressSync(){const {data,status}=useSession();const synced=useRef('');useEffect(()=>{const id=data?.user?.id;if(status!=='authenticated'||!id||synced.current===id)return;synced.current=id;let lessons:Record<string,unknown>={},level2:Record<string,unknown>={};try{const value=JSON.parse(localStorage.getItem('nt-lessons')||'{}');lessons=Array.isArray(value)?Object.fromEntries(value.filter((index:number)=>lessonGroups[index]).map((index:number)=>[lessonGroups[index].id,{completed:true,stars:3,accuracy:100}])):value}catch{}try{level2=JSON.parse(localStorage.getItem('nt-level2')||'{}')}catch{}const payload={layout:localStorage.getItem('nt-layout')||'traditional',lessons,level2};fetch('/api/progress/merge',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(()=>{synced.current=''})},[data?.user?.id,status]);return null}
+export function AppProviders({children}:{children:React.ReactNode}){return <SessionProvider><ProgressSync/>{children}</SessionProvider>}

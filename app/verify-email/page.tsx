@@ -1,1 +1,2 @@
-import {SiteHeader} from '@/components/SiteHeader';export const metadata={title:'Verify your email',robots:{index:false,follow:false}};export default function Verify(){return <><SiteHeader/><main className="container"><section className="auth-card"><h1>Check your inbox</h1><p>Use the 24-hour verification link we sent to confirm your email.</p><button className="button secondary">Resend verification email</button></section></main></>}
+import {SiteHeader} from '@/components/SiteHeader';import {VerificationPanel} from '@/components/VerificationPanel';export const metadata={title:'Verify your email',robots:{index:false,follow:false}};
+export default function Verify(){return <><SiteHeader/><main className="container-app auth-page"><VerificationPanel/></main></>}

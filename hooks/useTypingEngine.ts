@@ -27,6 +27,6 @@ export function useTypingEngine({target,layoutId,stopOnError=false,onComplete}:{
  // Keep the visual flash alive for its short 200 ms window; keyup cannot leave
  // it stuck because every new press replaces this timer and blur also expires it.
  const onKeyUp=useCallback(()=>{},[]);
- const reset=useCallback(()=>dispatch({type:'RESET'}),[]);
+ const reset=useCallback(()=>{completed.current=false;dispatch({type:'RESET'})},[]);
  return {state,expected,onKeyDown,onKeyUp,reset,expectedKey:expected[state.cursor],complete:expected.length>0&&state.cursor>=expected.length,accuracy:state.totalKeystrokes?Math.round(state.correctKeystrokes/state.totalKeystrokes*100):100};
 }
