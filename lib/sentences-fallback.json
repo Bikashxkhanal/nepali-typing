@@ -1,0 +1,374 @@
+[
+  {
+    "id": "np-1",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "आज बिहान म चाँडै उठेँ।"
+  },
+  {
+    "id": "np-2",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "आमाले स्वादिलो खाना पकाउनुभयो।"
+  },
+  {
+    "id": "np-3",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "हामी सबै मिलेर घर सफा गर्छौँ।"
+  },
+  {
+    "id": "np-4",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "बुबा बजारबाट ताजा फल ल्याउनुहुन्छ।"
+  },
+  {
+    "id": "np-5",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "म हरेक दिन पानी पिउँछु।"
+  },
+  {
+    "id": "np-6",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "बहिनीले आफ्नो किताब पढिन्।"
+  },
+  {
+    "id": "np-7",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "हामी बेलुका सँगै खाना खान्छौँ।"
+  },
+  {
+    "id": "np-8",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "आज मौसम निकै राम्रो छ।"
+  },
+  {
+    "id": "np-9",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "मेरो साथी समयमै घर आयो।"
+  },
+  {
+    "id": "np-10",
+    "difficulty": "easy",
+    "category": "daily life",
+    "text": "हजुरआमाले मीठो कथा सुनाउनुभयो।"
+  },
+  {
+    "id": "np-11",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "मेहनतको फल मिठो हुन्छ।"
+  },
+  {
+    "id": "np-12",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "एकतामा ठूलो शक्ति हुन्छ।"
+  },
+  {
+    "id": "np-13",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "थोपा थोपा मिलेर सागर बन्छ।"
+  },
+  {
+    "id": "np-14",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "बिस्तारै हिँडे अवश्य पुगिन्छ।"
+  },
+  {
+    "id": "np-15",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "ज्ञानभन्दा ठूलो धन हुँदैन।"
+  },
+  {
+    "id": "np-16",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "सत्यको सधैँ जित हुन्छ।"
+  },
+  {
+    "id": "np-17",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "समय अमूल्य हुन्छ।"
+  },
+  {
+    "id": "np-18",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "असल कामको राम्रो परिणाम आउँछ।"
+  },
+  {
+    "id": "np-19",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "धैर्यले कठिन बाटो सजिलो बनाउँछ।"
+  },
+  {
+    "id": "np-20",
+    "difficulty": "easy",
+    "category": "proverbs",
+    "text": "मिलेर काम गर्दा सफलता मिल्छ।"
+  },
+  {
+    "id": "np-21",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "हिमालमा बिहानको घाम सुनौलो देखिन्छ।"
+  },
+  {
+    "id": "np-22",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "वर्षापछि वनका पात हरिया हुन्छन्।"
+  },
+  {
+    "id": "np-23",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "नदीको पानी खेतसम्म पुग्छ।"
+  },
+  {
+    "id": "np-24",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "चराहरू बिहानै मिठो गीत गाउँछन्।"
+  },
+  {
+    "id": "np-25",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "वसन्तमा बगैँचा रङ्गीन फूलले भरिन्छ।"
+  },
+  {
+    "id": "np-26",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "हावाले रूखका हाँगा बिस्तारै हल्लाउँछ।"
+  },
+  {
+    "id": "np-27",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "पहाडको बाटोबाट सुन्दर गाउँ देखिन्छ।"
+  },
+  {
+    "id": "np-28",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "सफा आकाशमा सेता बादल तैरिरहेका छन्।"
+  },
+  {
+    "id": "np-29",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "वन जोगाउँदा पानीका मुहान सुरक्षित रहन्छन्।"
+  },
+  {
+    "id": "np-30",
+    "difficulty": "medium",
+    "category": "nature",
+    "text": "किसानले वर्षाको पानी खेतमा जम्मा गर्छन्।"
+  },
+  {
+    "id": "np-31",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "विद्यार्थीले कक्षामा ध्यान दिएर पाठ सुने।"
+  },
+  {
+    "id": "np-32",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "शिक्षकले नयाँ विषय उदाहरणसहित बुझाउनुभयो।"
+  },
+  {
+    "id": "np-33",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "पुस्तकालयमा धेरै उपयोगी पुस्तक छन्।"
+  },
+  {
+    "id": "np-34",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "हामी समूहमा विज्ञानको परियोजना बनाउँदै छौँ।"
+  },
+  {
+    "id": "np-35",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "विद्यालयको मैदानमा खेलकुद प्रतियोगिता भयो।"
+  },
+  {
+    "id": "np-36",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "नियमित अभ्यासले पढाइमा राम्रो नतिजा आउँछ।"
+  },
+  {
+    "id": "np-37",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "कक्षाका साथीहरूले सफाइ अभियान चलाए।"
+  },
+  {
+    "id": "np-38",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "विद्यार्थीले प्रश्न सोधेर आफ्नो जिज्ञासा मेटाए।"
+  },
+  {
+    "id": "np-39",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "विद्यालयले अभिभावकका लागि भेला आयोजना गर्‍यो।"
+  },
+  {
+    "id": "np-40",
+    "difficulty": "medium",
+    "category": "school",
+    "text": "परीक्षाको तयारी गर्दा विश्राम लिनु पनि आवश्यक छ।"
+  },
+  {
+    "id": "np-41",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "नगरपालिकाले नयाँ सार्वजनिक पुस्तकालय सुरु गरेको छ।"
+  },
+  {
+    "id": "np-42",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "स्थानीय किसानलाई उन्नत बीउ वितरण गरिएको छ।"
+  },
+  {
+    "id": "np-43",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "आज बिहान मुख्य सडकमा यातायात सामान्य रह्यो।"
+  },
+  {
+    "id": "np-44",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "स्वास्थ्य टोलीले गाउँमा निःशुल्क जाँच सेवा दियो।"
+  },
+  {
+    "id": "np-45",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "वर्षापछि नदीको बहाव बढेको अधिकारीहरूले बताएका छन्।"
+  },
+  {
+    "id": "np-46",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "विद्यालयमा आजदेखि वातावरण संरक्षण अभियान सुरु भयो।"
+  },
+  {
+    "id": "np-47",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "बजारमा स्थानीय उत्पादनको माग बढ्दै गएको छ।"
+  },
+  {
+    "id": "np-48",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "नगर क्षेत्रमा फोहोर व्यवस्थापन सुधार्ने योजना सार्वजनिक भयो।"
+  },
+  {
+    "id": "np-49",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "खेलाडीहरूले प्रतियोगितामा उत्कृष्ट प्रदर्शन गरे।"
+  },
+  {
+    "id": "np-50",
+    "difficulty": "medium",
+    "category": "news-style",
+    "text": "सेवाग्राहीलाई छिटो सेवा दिन कार्यालयले नयाँ व्यवस्था गरेको छ।"
+  },
+  {
+    "id": "np-51",
+    "difficulty": "long",
+    "category": "daily life",
+    "text": "परिवारका सबै सदस्यले आआफ्नो काम सकेपछि बेलुका सँगै बसेर दिनभरिका अनुभव सुनाए।"
+  },
+  {
+    "id": "np-52",
+    "difficulty": "long",
+    "category": "daily life",
+    "text": "हामीले घर नजिकैको पसलबाट आवश्यक सामान किन्यौँ र फर्कँदा छिमेकीलाई पनि भेट्यौँ।"
+  },
+  {
+    "id": "np-53",
+    "difficulty": "long",
+    "category": "daily life",
+    "text": "स्वस्थ रहन पौष्टिक खाना खानु, पर्याप्त पानी पिउनु र नियमित हिँड्नु राम्रो बानी हो।"
+  },
+  {
+    "id": "np-54",
+    "difficulty": "long",
+    "category": "proverbs",
+    "text": "कठिन समयमा धैर्य राखेर निरन्तर प्रयास गर्ने मानिसले अन्ततः आफ्नो लक्ष्य भेट्टाउँछ।"
+  },
+  {
+    "id": "np-55",
+    "difficulty": "long",
+    "category": "proverbs",
+    "text": "अरूलाई सम्मान गर्ने र सहयोग गर्ने बानीले समाजमा विश्वास र मित्रता बढाउँछ।"
+  },
+  {
+    "id": "np-56",
+    "difficulty": "long",
+    "category": "nature",
+    "text": "वर्षायाममा पहाडका साना खोलाहरू भरिन्छन् र तिनको पानीले खेतबारी सिँचाइ गर्न मद्दत गर्छ।"
+  },
+  {
+    "id": "np-57",
+    "difficulty": "long",
+    "category": "nature",
+    "text": "वनस्पति र वन्यजन्तुको संरक्षण गरेमा प्रकृतिको सन्तुलन कायम राख्न सकिन्छ।"
+  },
+  {
+    "id": "np-58",
+    "difficulty": "long",
+    "category": "school",
+    "text": "विद्यार्थीहरूले शिक्षकको मार्गदर्शनमा विद्यालय परिसरमा बिरुवा रोपे र तिनको हेरचाह गर्ने जिम्मा बाँडे।"
+  },
+  {
+    "id": "np-59",
+    "difficulty": "long",
+    "category": "school",
+    "text": "पुस्तक पढ्ने बानीले नयाँ कुरा सिक्न, स्पष्ट लेख्न र आफ्ना विचार अरूसँग बाँड्न सहयोग गर्छ।"
+  },
+  {
+    "id": "np-60",
+    "difficulty": "long",
+    "category": "news-style",
+    "text": "स्थानीय प्रशासनले नागरिकको सुझाव समेटेर खानेपानी सेवा सुधार्ने योजना आगामी महिनादेखि लागू गर्ने जनाएको छ।"
+  },
+  {
+    "id": "np-61",
+    "difficulty": "long",
+    "category": "news-style",
+    "text": "स्वास्थ्यकर्मीहरूले बालबालिकालाई नियमित खोप लगाउन र अभिभावकलाई नजिकको स्वास्थ्य केन्द्रमा सम्पर्क गर्न आग्रह गरेका छन्।"
+  },
+  {
+    "id": "np-62",
+    "difficulty": "long",
+    "category": "news-style",
+    "text": "कृषि कार्यालयले मौसमको जानकारीअनुसार बाली लगाउन किसानलाई परामर्श दिएको छ।"
+  }
+]
