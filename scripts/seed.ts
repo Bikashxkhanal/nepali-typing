@@ -7,7 +7,26 @@ import { practiceSentences } from '../lib/sentences';
 import { layouts } from '../lib/layouts';
 
 async function seed() {
-  await connectDB();
+  if (!process.env.MONGODB_URI) {
+    const fs = await import('node:fs/promises');
+    const envFile = await fs.readFile('.env.local', 'utf8').catch(() => '');
+    const entry = envFile.split(/\r?\n/).find((line) => /^\s*MONGODB_URI\s*=/.test(line));
+    if (entry) {
+      const value = entry.slice(entry.indexOf('=') + 1).trim().replace(/^(['"])(.*)\1$/, '$2');
+      if (value) process.env.MONGODB_URI = value;
+    }
+  }
+  try {
+    await connectDB();
+  } catch (error) {
+    // Level 2 ships with a checked-in local sentence pool, so a missing or
+    // unavailable MongoDB should not prevent local development.
+    const fs = await import('node:fs/promises');
+    await fs.writeFile('lib/sentences-fallback.json', JSON.stringify(practiceSentences, null, 2));
+    console.warn('MongoDB is unavailable; wrote the local sentence fallback to lib/sentences-fallback.json.');
+    console.warn(error instanceof Error ? error.message : error);
+    return;
+  }
   const base = [
     'नेपाल', 'भाषा', 'शिक्षा', 'विद्यालय', 'परिवार', 'साथी', 'समय', 'अभ्यास', 'ज्ञान', 'किताब',
     'कलम', 'घर', 'सडक', 'पहाड', 'नदी', 'काठमाडौँ', 'सुन्दर', 'स्वास्थ्य', 'परिश्रम', 'सफलता',
@@ -16,7 +35,7 @@ async function seed() {
   const words = Array.from({ length: 300 }, (_, i) => ({
     type: 'word', seedKey: `starter-word-${i + 1}`, text: base[i % base.length], difficulty: 1 + Math.floor(i / 100), tags: ['daily'],
   }));
-  const typeable = new Set(layouts.flatMap(layout => Object.values(layout.mapping).flatMap(key => [key.normal,key.shift,key.altGr]).filter((x):x is string=>!!x).join('')));
+  const typeable = new Set(layouts.flatMap(layout => Object.values(layout.mapping).flatMap(key => [key.normal,key.shift,key.altGr]).filter((x):x is string=>!!x).flatMap(value => [...value])));
   const invalid = practiceSentences.filter(sentence => [...sentence.text].some(char => char !== ' ' && !typeable.has(char)));
   if (invalid.length) throw new Error(`Sentence seed contains characters unavailable on configured layouts: ${invalid.map(x=>x.id).join(', ')}`);
   const sentences = practiceSentences.map((sentence) => ({
@@ -48,9 +67,6 @@ async function seed() {
 
 seed().catch(async (error: unknown) => {
   console.error('Seed failed:', error);
-  const fs = await import('node:fs/promises');
-  await fs.writeFile('lib/sentences-fallback.json', JSON.stringify(practiceSentences, null, 2));
-  console.error('Wrote local sentence fallback to lib/sentences-fallback.json');
   await mongoose.disconnect();
   process.exitCode = 1;
 });
